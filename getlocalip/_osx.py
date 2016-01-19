@@ -14,12 +14,14 @@ class sockaddr(ctypes.Structure):
                 ('sa_familiy', ctypes.c_uint8),
                 ('sa_data', ctypes.c_byte * 14)]
 
+
 class sockaddr_in(ctypes.Structure):
     _fields_ = [('sa_len', ctypes.c_uint8),
                 ('sa_familiy', ctypes.c_uint8),
                 ('sin_port', ctypes.c_ushort),
                 ('sin_addr', ctypes.c_byte * 4),
                 ('sin_zero', ctypes.c_byte * 8)]
+
 
 class sockaddr_in6(ctypes.Structure):
     _fields_ = [('sa_len', ctypes.c_uint8),
@@ -28,6 +30,7 @@ class sockaddr_in6(ctypes.Structure):
                 ('sin6_flowinfo', ctypes.c_ulong),
                 ('sin6_addr', ctypes.c_byte * 16),
                 ('sin6_scope_id', ctypes.c_ulong)]
+
 
 class ifaddrs(ctypes.Structure):
     pass
